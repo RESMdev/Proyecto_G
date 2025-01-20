@@ -1,5 +1,5 @@
 .LANDING-d {
-  background-color: #ffffff;
+  background-color: var(--blanco);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -358,7 +358,7 @@
   margin-top: -1.00px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 40px;
   text-align: center;
   letter-spacing: 0;
@@ -370,7 +370,7 @@
   align-self: stretch;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 16px;
   text-align: center;
   letter-spacing: 0;
@@ -675,7 +675,7 @@ img {
   margin-top: -1.00px;
   font-family: "Raleway-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 24px;
   letter-spacing: 0;
   line-height: normal;
@@ -766,7 +766,7 @@ img {
   margin-top: -1.00px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 40px;
   text-align: center;
   letter-spacing: 0;
@@ -778,7 +778,7 @@ img {
   align-self: stretch;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 16px;
   text-align: center;
   letter-spacing: 0;
@@ -866,3 +866,14 @@ img {
 }
 
 
+/* Modo Día */
+body.modo-dia {
+  .LANDING-d {
+    position: relative;
+    height: auto;
+    width: auto;
+    background-image: url(./assets/fondoL.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}

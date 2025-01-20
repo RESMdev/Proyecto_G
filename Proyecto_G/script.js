@@ -180,3 +180,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+//Modo día-noche
+// Obtener el botón y el contenedor del fondo
+const modoDiaBtn = document.getElementById('modoDiaBtn');
+const body = document.body;
+
+// Verificar si el usuario tiene una preferencia guardada
+if (localStorage.getItem('modo') === 'dia') {
+    body.classList.add('modo-dia');
+} else {
+    body.classList.add('modo-noche');
+}
+
+// Cambiar entre los modos y guardar la preferencia
+modoDiaBtn.addEventListener('click', () => {
+    if (body.classList.contains('modo-dia')) {
+        body.classList.remove('modo-dia');
+        body.classList.add('modo-noche');
+        localStorage.setItem('modo', 'noche');  // Guardar preferencia de modo noche
+    } else {
+        body.classList.remove('modo-noche');
+        body.classList.add('modo-dia');
+        localStorage.setItem('modo', 'dia');  // Guardar preferencia de modo día
+    }
+});
