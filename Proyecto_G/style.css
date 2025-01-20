@@ -851,7 +851,13 @@ img {
 }
 
 .arrastrable{
+  cursor: grab; /* El cursor cambia cuando se puede arrastrar */
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+.arrastrable:active{
+  cursor: grabbing; /* Cuando se está arrastrando */
 }
 
 .frame-practicas {
@@ -860,6 +866,7 @@ img {
 }
 
 .clickeable {
+  cursor: grab;
   z-index: 10; /* Asegúrate de que la clase clickeable tenga un valor mayor */
   outline: 2px dashed red; /* Asegúrate de que el área clickeable esté visible */
 }
