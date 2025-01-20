@@ -2,9 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
+
+    // Leaflet
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    //Complementos Leaflet
+    <script src="https://unpkg.com/shapefile@0.6.12/dist/shapefile.js"></script>
+
+    // Estilos
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="styleguide.css" />
     <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
     <div class="LANDING-d">
@@ -15,7 +25,9 @@
               <div class="group">
                 <div id="rectangle-2" class="visualizador" style="background-color: blue;"></div>
                 <div id="rectangle-3" class="visualizador" style="background-color: green;"></div>
-                <div id="rectangle-4" class="visualizador" style="background-color: yellow;"></div>
+                <div id="rectangle-4" class="visualizador" style="background-color: yellow;">
+                  <div id="map"></div>
+                </div>
                 <div id="rectangle-5" class="visualizador" style="background-color: purple;"></div>
                 <div id="rectangle-6" class="visualizador" style="background-color: orange;"></div>
                 <div id="rectangle-8" class="visualizador" style="background-color: cyan;"></div>
