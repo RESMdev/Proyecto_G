@@ -14,4 +14,13 @@
   --rojo: rgba(255, 55, 55, 1);
   --transparente: rgba(217, 217, 217, 0);
   --hover: rgba(57, 46, 87, 1);
+  --subtitulo: rgb(255, 255, 255, 20);
+}
+
+body.modo-dia {
+  --n-50: rgba(255, 255, 255, 50); /* Modificar valores específicos para el día */
+  --n-10: rgba(75, 75, 75, 3);
+  --blanco: rgba(0, 0, 0, 100);
+  --subtitulo: rgb(0, 0, 0, 20);
+
 }
