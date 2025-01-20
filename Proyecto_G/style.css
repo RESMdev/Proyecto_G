@@ -1,5 +1,5 @@
 .LANDING-d {
-  background-color: #ffffff;
+  background-color: var(--blanco);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -358,7 +358,7 @@
   margin-top: -1.00px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 40px;
   text-align: center;
   letter-spacing: 0;
@@ -370,7 +370,7 @@
   align-self: stretch;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 16px;
   text-align: center;
   letter-spacing: 0;
@@ -603,14 +603,6 @@ img {
   transition: transform 0.9s ease, opacity 0.9s ease;
 } 
 
-.home:hover{
-
-} 
-
-.dlmode:active{
-
-}
-
 .enes:active{
   content: url("assets/icono/enes-c.svg");
 }
@@ -622,6 +614,8 @@ img {
   width: 992px;
   height: 992px;
   display: none; /* Oculta todos los visualizadores inicialmente */
+  z-index: 5;
+  border-radius: 10px;
 }
 
 .derecha-frame-d {
@@ -681,7 +675,7 @@ img {
   margin-top: -1.00px;
   font-family: "Raleway-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 24px;
   letter-spacing: 0;
   line-height: normal;
@@ -772,7 +766,7 @@ img {
   margin-top: -1.00px;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 40px;
   text-align: center;
   letter-spacing: 0;
@@ -784,7 +778,7 @@ img {
   align-self: stretch;
   font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  color: #ffffff;
+  color: var(--blanco);
   font-size: 16px;
   text-align: center;
   letter-spacing: 0;
@@ -851,7 +845,13 @@ img {
 }
 
 .arrastrable{
+  cursor: grab; /* El cursor cambia cuando se puede arrastrar */
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+.arrastrable:active{
+  cursor: grabbing; /* Cuando se está arrastrando */
 }
 
 .frame-practicas {
@@ -860,8 +860,20 @@ img {
 }
 
 .clickeable {
+  cursor: grab;
   z-index: 10; /* Asegúrate de que la clase clickeable tenga un valor mayor */
   outline: 2px dashed red; /* Asegúrate de que el área clickeable esté visible */
 }
 
 
+/* Modo Día */
+body.modo-dia {
+  .LANDING-d {
+    position: relative;
+    height: auto;
+    width: auto;
+    background-image: url(./assets/fondoL.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
