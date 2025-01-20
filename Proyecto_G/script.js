@@ -122,4 +122,61 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       
             
+//Función descarga
+document.addEventListener('DOMContentLoaded', function() {
+    // Función para manejar el drag and drop
+    const downloadArea = document.querySelector('.descargar');
+
+    downloadArea.addEventListener('dragover', function(e) {
+        e.preventDefault(); // Prevenir el comportamiento predeterminado
+        // Aquí podrías cambiar el estilo del área de descarga para indicar que se puede soltar
+        downloadArea.classList.add('drag-over');
+    });
+
+    downloadArea.addEventListener('dragleave', function() {
+        // Eliminar el estilo de "drag-over" cuando el elemento deje el área
+        downloadArea.classList.remove('drag-over');
+    });
+
+    downloadArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        // Obtener el data-id de la caja que se soltó
+        const id = e.dataTransfer.getData('text/plain'); 
+
+        // Aquí puedes hacer que se descargue el archivo correspondiente
+        // Vamos a suponer que cada práctica tiene un archivo relacionado, por ejemplo, un PDF o archivo .zip
+        const archivo = obtenerArchivoDePractica(id);  // Esta función debe devolver la URL del archivo a descargar
+        
+        if (archivo) {
+            // Crear un link para descargar el archivo
+            const link = document.createElement('a');
+            link.href = archivo;  // URL del archivo de la práctica
+            link.download = id + ".pdf";  // Nombre del archivo a descargar (puedes modificar la extensión según sea necesario)
+            link.click();  // Simula un click en el enlace para descargar
+        }
+
+        // Eliminar el estilo de "drag-over"
+        downloadArea.classList.remove('drag-over');
+    });
+
+    // Función que devuelve la URL del archivo correspondiente basado en el ID
+    function obtenerArchivoDePractica(id) {
+        // Aquí puedes tener una lógica para asociar cada ID de práctica con su archivo
+        // Ejemplo:
+        const archivos = {
+            'rectangle-1': '/assets/archivos/pdf01.pdf',
+            'rectangle-3': '/assets/archivos/pdf02.pdf',
+            'rectangle-2': '/assets/archivos/pdf03.pdf',
+            'rectangle-4': '/assets/archivos/pdf04.pdf',
+            'rectangle-5': '/assets/archivos/pdf05.pdf',
+            'rectangle-6': '/assets/archivos/pdf06.pdf',
+            'rectangle-7': '/assets/archivos/pdf07.pdf',
+            'rectangle-8': '/assets/archivos/pdf08.pdf',
+            'rectangle-9': '/assets/archivos/pdf09.pdf',
+            // Agregar más prácticas según sea necesario
+        };
+
+        return archivos[id];
+    }
+});
 

@@ -603,14 +603,6 @@ img {
   transition: transform 0.9s ease, opacity 0.9s ease;
 } 
 
-.home:hover{
-
-} 
-
-.dlmode:active{
-
-}
-
 .enes:active{
   content: url("assets/icono/enes-c.svg");
 }
@@ -622,6 +614,8 @@ img {
   width: 992px;
   height: 992px;
   display: none; /* Oculta todos los visualizadores inicialmente */
+  z-index: 5;
+  border-radius: 10px;
 }
 
 .derecha-frame-d {
