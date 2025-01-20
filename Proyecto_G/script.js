@@ -65,74 +65,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //Funciión para arrastrar y dropear
     document.addEventListener('DOMContentLoaded', function() {
-        const arrastrables = document.querySelectorAll('.arrastrable');
-        const contenedor = document.querySelector('.div-2derecha'); // O el contenedor donde se sueltan las cajas
-    
-        arrastrables.forEach(function(cajita) {
-            // Manejar el evento 'dragstart'
-            cajita.addEventListener('dragstart', function(e) {
-                e.target.classList.add('arrastrando');
-                e.dataTransfer.setData('text/plain', e.target.id);
-            });
-    
-            // Manejar el evento 'dragend'
-            cajita.addEventListener('dragend', function(e) {
-                e.target.classList.remove('arrastrando');
-            });
+        // Función para hacer los elementos arrastrables
+        document.querySelectorAll('.arrastrable').forEach(function(cajita) {
+          cajita.addEventListener('dragstart', function(event) {
+            // Guardamos el id de la caja que se está arrastrando en el dataTransfer del evento
+            event.dataTransfer.setData('text', cajita.getAttribute('data-id'));
+          });
         });
-    
-        // Hacer que las zonas donde se puede soltar los elementos respondan al 'dragover'
-        contenedor.addEventListener('dragover', function(e) {
-            e.preventDefault(); // Permitir el 'drop'
+      
+        // Función para permitir que el contenedor acepte el drop
+        const groupContainer = document.querySelector('.group');
+        groupContainer.addEventListener('dragover', function(event) {
+          // Prevenir el comportamiento por defecto para permitir el drop
+          event.preventDefault();
         });
-    
-        // Manejar el evento 'drop' para soltar el elemento
-        contenedor.addEventListener('drop', function(e) {
-            e.preventDefault();
-    
-            // Obtener el ID del elemento arrastrado
-            const id = e.dataTransfer.getData('text/plain');
-            const elementoArrastrado = document.getElementById(id);
-            
-            // Obtener el ID del visualizador asociado (desde data-visualizador)
-            const visualizadorId = elementoArrastrado.getAttribute('data-visualizador');
-            const visualizador = document.getElementById(visualizadorId);
-    
-            // Obtener la posición en donde se soltó el elemento
-            const rect = contenedor.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-    
-            // Colocar el elemento en la nueva posición
-            elementoArrastrado.style.position = 'absolute';
-            elementoArrastrado.style.left = `${x - (elementoArrastrado.offsetWidth / 2)}px`;
-            elementoArrastrado.style.top = `${y - (elementoArrastrado.offsetHeight / 2)}px`;
-    
-            // Mostrar el visualizador correspondiente
-            mostrarVisualizador(visualizador);
-    
-            // Opcional: Ocultar otros visualizadores si no los necesitas visibles
-            ocultarOtrosVisualizadores(visualizadorId);
+      
+        // Función para manejar el evento de "soltar"
+        groupContainer.addEventListener('drop', function(event) {
+          // Prevenir el comportamiento por defecto (como abrir enlaces)
+          event.preventDefault();
+      
+          // Obtener el id de la caja que fue arrastrada
+          const id = event.dataTransfer.getData('text');
+      
+          // Mostrar la práctica correspondiente
+          document.querySelectorAll('.visualizador').forEach(function(visualizador) {
+            visualizador.style.display = 'none'; // Ocultamos todas las prácticas
+          });
+          
+          // Cambiar la imagen del Home a una imagen de visualización (puedes cambiarla según lo desees)
+        homeImage.src = '/assets/icono/home-d.svg'; // Cambia esta ruta por la imagen que desees para la visualización
+
+          // Mostrar el visualizador correspondiente basado en el id
+          const visualizador = document.querySelector(`#${id}`);
+          if (visualizador) {
+            visualizador.style.display = 'block'; // Hacemos visible la práctica correspondiente
+          }
         });
-    });
-    
-    // Función para mostrar el visualizador
-    function mostrarVisualizador(visualizador) {
-        // Asegúrate de que solo el visualizador relevante esté visible
-        visualizador.style.display = 'block'; // Mostrar el visualizador
-    }
-    
-    // Función para ocultar otros visualizadores
-    function ocultarOtrosVisualizadores(visualizadorId) {
-        // Seleccionamos todos los visualizadores
-        const visualizadores = document.querySelectorAll('.visualizador');
+      
+        // Función para manejar la lógica del botón "Home"
+        const homeButton = document.getElementById('homeButton');
+        const homeImage = document.getElementById('homeImage');
         
-        // Ocultamos todos los visualizadores excepto el que corresponde
-        visualizadores.forEach(function(visu) {
-            if (visu.id !== visualizadorId) {
-                visu.style.display = 'none';
-            }
+        homeButton.addEventListener('click', function() {
+          // Volver a la imagen inicial y ocultar todas las visualizaciones
+          homeImage.src = '/assets/icono/home.svg';
+          document.querySelectorAll('.visualizador').forEach(function(visualizador) {
+            visualizador.style.display = 'none';
+          });
+      
+          // Mostrar todas las cajas de prácticas
+          document.querySelectorAll('.clicleable').forEach(function(cajita) {
+            cajita.style.display = 'block';
+          });
         });
-    }
+      });
+      
             
 
