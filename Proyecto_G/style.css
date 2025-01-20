@@ -13,7 +13,8 @@
 
 .LANDING-d {
   position: relative;
-  height: 1024px;
+  height: auto;
+  width: auto;
   background-image: url(./assets/fondoD.png);
   background-size: cover;
   background-position: 50% 50%;
@@ -27,16 +28,16 @@
 
 .LANDING-d .overlap {
   position: absolute;
-  width: 1365px;
-  height: 1115px;
+  width: auto;
+  height: auto;
   top: 16px;
   left: -272px;
 }
 
 .LANDING-d .div {
   position: absolute;
-  width: 1365px;
-  height: 1115px;
+  width: auto;
+  height: auto;
   top: 0;
   left: 0;
 }
@@ -576,6 +577,16 @@ img {
 
 .Pablo:hover{
   content: url("assets/icono/Pablo-h.svg");
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.9s ease, opacity 0.9s ease;
 } 
 
 .RESM:hover{
@@ -708,7 +719,6 @@ img {
 }
 
 .derecha-frame-d .overlap-group-wrapper {
-  position: relative;
   width: 164.5px;
   height: 164.5px;
 }
@@ -844,8 +854,14 @@ img {
 
 }
 
-.clickeable{
-  cursor: pointer;
-  position: relative; /* Asegúrate de que se pueda hacer clic en ella */
-
+.frame-practicas {
+  position: relative;
+  z-index: 0;
 }
+
+.clickeable {
+  z-index: 10; /* Asegúrate de que la clase clickeable tenga un valor mayor */
+  outline: 2px dashed red; /* Asegúrate de que el área clickeable esté visible */
+}
+
+
