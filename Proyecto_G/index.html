@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8" />
 
-    // Leaflet
+    <!--Scripts-->>
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script src="js/shp.js"></script>
+    <script src="js/leaflet.shpfile.js"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/styleguide.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-    //Complementos Leaflet
-    <script src="https://unpkg.com/shapefile@0.6.12/dist/shapefile.js"></script>
-
-    // Estilos
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
 
   </head>
   <body>
@@ -23,17 +22,19 @@
           <div class="overlap">
             <div class="div">
               <div class="group">
+                <div id="rectangle-1" class="visualizador" style="background-color: red;"></div>
                 <div id="rectangle-2" class="visualizador" style="background-color: blue;"></div>
-                <div id="rectangle-3" class="visualizador" style="background-color: green;"></div>
-                <div id="rectangle-4" class="visualizador" style="background-color: yellow;">
-                  <div id="map"></div>
+                <div id="rectangle-3" class="visualizador"></div>
+                <div id="rectangle-4" class="visualizador" style="background-color: green;"></div>
+                <div id="rectangle-5" class="visualizador"> 
+                  <script src="js/mapas.js"></script> <!--Tiene que estar después que el rect3 y antes que cargarHTML-->
+                  <script> cargarHTML("assets/practicas/8Practica/Contenedores_Rebollo.html", "rectangle-5") </script> 
                 </div>
-                <div id="rectangle-5" class="visualizador" style="background-color: purple;"></div>
                 <div id="rectangle-6" class="visualizador" style="background-color: orange;"></div>
+                <div id="rectangle-7" class="visualizador" style="background-color: pink;"></div>
                 <div id="rectangle-8" class="visualizador" style="background-color: cyan;"></div>
                 <div id="rectangle-9" class="visualizador" style="background-color: brown;"></div>
-                <div id="rectangle-1" class="visualizador" style="background-color: red;"></div>
-                <div id="rectangle-7" class="visualizador" style="background-color: pink;"></div>
+
                 <div class="rectangle"></div>
                 <div class="rectangle-2"></div>
                 <div class="rectangle-3"></div>
@@ -48,28 +49,28 @@
               <div class="rectangle-11"></div>
               <div class="menu1">
                 <div class="div-2">
-                  <div class="Github-d" id="github"><img class="image Github" src="assets/icono/Github-d.svg" /></div>
+                  <div class="Github-d" id="github"><img class="image Github" src="../assets/icono/Github-d.svg" /></div>
                 </div>
                 <div class="div-2">
-                  <div class="Figma-d" id="figma"><img class="image Figma" src="assets/icono/Figma-d.svg" /></div>
+                  <div class="Figma-d" id="figma"><img class="image Figma" src="../assets/icono/Figma-d.svg" /></div>
                 </div>
                 <div class="div-2 Pablo" id="pablo">
-                  <div class="Pablo-d"><img class="image Pablo" src="assets/icono/Pablo-d.svg" /></div>
+                  <div class="Pablo-d"><img class="image Pablo" src="../assets/icono/Pablo-d.svg" /></div>
                 </div>
                 <div class="div-2 RESM-c" id="resm">
-                  <div class="RESM-d"><img class="image RESM" src="assets/icono/RESM-d.svg" /></div>
+                  <div class="RESM-d"><img class="image RESM" src="../assets/icono/RESM-d.svg" /></div>
                 </div>
               </div>
             </div>
             <div class="menu2">
               <div class="div-2">
-                <div class="home" id="homeButton"><img class="image home" id="homeImage" src="assets/icono/home-c.svg" /></div>
+                <div class="home" id="homeButton"><img class="image home" id="homeImage" src="../assets/icono/home-c.svg" /></div>
               </div>
               <div class="div-2">
-                <div class="dlmode-d" id="modoDiaBtn"><img class="image dlmode" src="assets/icono/dlmode-d.svg" /></div>
+                <div class="dlmode-d" id="modoDiaBtn"><img class="image dlmode" src="../assets/icono/dlmode-d.svg" /></div>
               </div>
               <div class="div-2">
-                <div class="enes-d"><img class="image enes" src="assets/icono/enes-d.svg" /></div>
+                <div class="enes-d"><img class="image enes" src="../assets/icono/enes-d.svg" /></div>
               </div>
             </div>
           </div>
@@ -205,6 +206,6 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+        <script src="js/script.js"></script>
   </body>
 </html>
