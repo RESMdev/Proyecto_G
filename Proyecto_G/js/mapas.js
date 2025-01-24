@@ -17,20 +17,3 @@
         console.log("finished loaded shapefile");
     });
 
-// Función para cargar el archivo HTML
-function cargarHTML(rutaArchivo, div) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", rutaArchivo, true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById(div).innerHTML = xhr.responseText;
-
-            // Ejecutar scripts manualmente después de cargar el contenido HTML
-            var scripts = document.getElementById(div).getElementsByTagName("script");
-            for (var i = 0; i < scripts.length; i++) {
-                eval(scripts[i].innerText);
-            }
-        }
-    };
-    xhr.send();
-}

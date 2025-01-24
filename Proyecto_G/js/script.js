@@ -23,12 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const homeButton = document.getElementById('homeButton'); // Botón de Home
     const homeImage = document.getElementById('homeImage'); // Imagen de la página principal
     
+    let url = ''; // Definir la variable url en el ámbito adecuado
+
+    document.getElementById('abrirMapa').disabled = true;
+
     // Función para mostrar la visualización y cambiar la imagen
     document.querySelectorAll('.clicleable').forEach(function(cajita) {
       cajita.addEventListener('click', function() {
         const id = cajita.getAttribute('data-id'); // Obtener el data-id de la caja clickeada
+        url = cajita.getAttribute('data-url'); // Obtener la URL desde el data-url
+
         console.log('Elemento clickeado:', id);
-  
+        if (url) {
+          console.log('URL del elemento:', url); // Mostrar la URL en la consola
+        }
+
         // Cambiar la imagen del Home a una imagen de visualización (puedes cambiarla según lo desees)
         homeImage.src = '/assets/icono/home-d.svg'; // Cambia esta ruta por la imagen que desees para la visualización
   
@@ -42,7 +51,24 @@ document.addEventListener('DOMContentLoaded', function() {
         if (visualizador) {
           visualizador.style.display = 'block';
         }
+        // Activar el botón solo si el clic fue en un rectangle-5 o rectangle-6
+        if (id === 'rectangle-5' || id === 'rectangle-6') {
+          console.log('Clic en rectangle-5 o rectangle-6'); // Verificar si entra aquí
+          document.getElementById('abrirMapa').disabled = false;
+          console.log('Redirigiendo a la URL:', url);
+        } else {
+          // Deshabilitar el botón si no es rectangle-5 o rectangle-6
+          document.getElementById('abrirMapa').disabled = true;
+        }
       });
+    });
+
+    // Redirigir cuando el botón es clickeado
+    document.getElementById('abrirMapa').addEventListener('click', function () {
+      if (document.getElementById('abrirMapa').disabled === false && url) {
+        console.log('Redirigiendo a la URL:', url);
+        window.location.href = url; // Redirigir a la URL almacenada
+      }
     });
   
     // Función para volver a la página principal
