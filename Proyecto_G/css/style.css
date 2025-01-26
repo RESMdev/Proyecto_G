@@ -1,0 +1,891 @@
+.LANDING-d {
+  background-color: var(--blanco);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.LANDING-d .overlap-group-wrapper {
+  width: 1440px;
+  height: 1024px;
+}
+
+.LANDING-d {
+  position: relative;
+  height: auto;
+  width: auto;
+  background-image: url(../assets/fondoD.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.overlap-group {
+  position: relative;
+  height: 1024px;
+  background-position: 50% 50%;
+}
+
+.LANDING-d .overlap {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 16px;
+  left: -272px;
+}
+
+.LANDING-d .div {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+.LANDING-d .group {
+  position: absolute;
+  width: 992px;
+  height: 992px;
+  top: 0;
+  left: 373px;
+}
+
+.LANDING-d .rectangle {
+  width: 330px;
+  height: 330px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-2 {
+  width: 330px;
+  height: 330px;
+  top: 0;
+  left: 331px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-3 {
+  width: 330px;
+  height: 330px;
+  top: 0;
+  left: 662px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-4 {
+  width: 330px;
+  height: 330px;
+  top: 331px;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-5 {
+  width: 330px;
+  height: 330px;
+  top: 331px;
+  left: 331px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-6 {
+  width: 330px;
+  height: 330px;
+  top: 331px;
+  left: 662px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-7 {
+  width: 330px;
+  height: 330px;
+  top: 662px;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-8 {
+  width: 330px;
+  height: 330px;
+  top: 662px;
+  left: 331px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-9 {
+  width: 330px;
+  height: 330px;
+  top: 662px;
+  left: 662px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-10 {
+  width: 661px;
+  height: 84px;
+  top: 289px;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-11 {
+  width: 330px;
+  height: 84px;
+  top: 785px;
+  left: 165px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .menu1 {
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  position: absolute;
+  top: 668px;
+  left: 294px;
+}
+
+.LANDING-d .div-2 {
+  display: inline-flex;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.LANDING-d .img {
+  position: relative;
+  width: 52px;
+  height: 52px;
+}
+
+.LANDING-d .image {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px;
+  position: relative;
+  background-color: var(--n-10);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.LANDING-d .menu2 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  position: absolute;
+  top: 6px;
+  left: 294px;
+}
+
+.LANDING-d .overlap-2 {
+  position: absolute;
+  width: 414px;
+  height: 578px;
+  top: -67px;
+  left: 1093px;
+}
+
+.LANDING-d .overlap-3 {
+  position: absolute;
+  width: 414px;
+  height: 578px;
+  top: 0;
+  left: 0;
+}
+
+.LANDING-d .rectangle-12 {
+  width: 164px;
+  height: 330px;
+  top: 0;
+  left: 84px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-13 {
+  top: 248px;
+  position: absolute;
+  width: 164px;
+  height: 164px;
+  left: 1px;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-14 {
+  width: 164px;
+  height: 164px;
+  top: 248px;
+  left: 166px;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .rectangle-15 {
+  top: 414px;
+  position: absolute;
+  width: 164px;
+  height: 164px;
+  left: 1px;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .frame-3 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 97px;
+  left: 15px;
+}
+
+.LANDING-d .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Raleway-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.LANDING-d .p {
+  position: relative;
+  width: 296px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff33;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.LANDING-d .frame-4 {
+  display: flex;
+  width: 166px;
+  height: 167px;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  position: absolute;
+  top: 248px;
+  left: 0;
+}
+
+.LANDING-d .frame-wrapper {
+  display: flex;
+  width: 156.5px;
+  height: 156.5px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  margin-right: -0.50px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.LANDING-d .frame-5 {
+  display: flex;
+  flex-direction: column;
+  width: 84px;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.LANDING-d .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--blanco);
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.LANDING-d .captura-de-pantalla {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--blanco);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.LANDING-d .div-wrapper {
+  display: flex;
+  width: 156.5px;
+  height: 156.5px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: relative;
+  margin-right: -167.00px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.LANDING-d .frame-6 {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 418px;
+  left: 5px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.LANDING-d .overlap-4 {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 414px;
+  left: 166px;
+  border-radius: 10px;
+}
+
+.LANDING-d .rectangle-16 {
+  width: 164px;
+  height: 164px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.LANDING-d .frame-7 {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.LANDING-d .overlap-5 {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 512px;
+  left: 1094px;
+  border-radius: 10px;
+}
+
+.LANDING-d .frame-8 {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.LANDING-d .overlap-6 {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 512px;
+  left: 1259px;
+  border-radius: 10px;
+}
+
+.LANDING-d .frame-9 {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.LANDING-d .overlap-7 {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 678px;
+  left: 1094px;
+  border-radius: 10px;
+}
+
+.LANDING-d .frame-10 {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.LANDING-d .overlap-8 {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 678px;
+  left: 1259px;
+  border-radius: 10px;
+}
+
+.LANDING-d .overlap-9 {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 843px;
+  left: 1094px;
+  border-radius: 10px;
+}
+
+.LANDING-d .overlap-10 {
+  position: absolute;
+  width: 165px;
+  height: 165px;
+  top: 843px;
+  left: 1259px;
+  border-radius: 10px;
+}
+
+.LANDING-d .frame-11 {
+  position: absolute;
+  width: 156px;
+  height: 156px;
+  top: 5px;
+  left: 5px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+/* Cambio de fondo y color del SVG al hacer hover */
+.LANDING-d .image:hover {
+  background-color: var(--n-50); /* Nuevo color de fondo */
+}
+
+/* Asegúrate de que los SVG sean compatibles con el cambio de color */
+img {
+  transition: fill 0.3s ease; /* Suaviza el cambio de color del SVG */
+}
+
+.Github:hover{
+  content: url("../assets/icono/Github-h.svg");
+} 
+
+.Figma:hover{
+  content: url("../assets/icono/Figma-h.svg");
+} 
+
+.Pablo:hover{
+  content: url("../assets/icono/Pablo-h.svg");
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+} 
+
+.RESM:hover{
+  content: url("../assets/icono/RESM-d-c.svg");
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+} 
+
+.enes:active{
+  content: url("../assets/icono/enes-c.svg");
+}
+
+.visualizador {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 992px;
+  height: 992px;
+  display: none; /* Oculta todos los visualizadores inicialmente */
+  z-index: 5;
+  border-radius: 10px;
+}
+
+.visualizadorMapas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 992px;
+  height: 992px;
+  display: none;
+  /* Oculta todos los visualizadores inicialmente */
+  z-index: 5;
+  border-radius: 10px;
+}
+
+.derecha-frame-d {
+  display: flex;
+  width: 347px;
+  height: 1024px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 1px;
+  position: relative;
+  left: 1093px;
+}
+
+.derecha-frame-d .derecha {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  align-items: flex-start;
+  gap: 1px;
+  position: relative;
+}
+
+.derecha-frame-d .practicas {
+  position: relative;
+  width: 330px;
+  height: 164.5px;
+}
+
+.derecha-frame-d .overlap-group {
+  position: relative;
+  height: 165px;
+}
+
+.derecha-frame-d .rectangle {
+  height: 330px;
+  top: -83px;
+  left: 83px;
+  position: absolute;
+  width: 164px;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.derecha-frame-d .frame {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.derecha-frame-d .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Raleway-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--blanco);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.derecha-frame-d .div {
+  position: relative;
+  width: 296px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff33;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.derecha-frame-d .frame-practicas {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.derecha-frame-d .div-2derecha {
+  display: flex;
+  flex-direction: column;
+  width: 164.5px;
+  align-items: flex-start;
+  gap: 1px;
+  position: relative;
+}
+
+.derecha-frame-d .overlap-group-wrapper {
+  width: 164.5px;
+  height: 164.5px;
+}
+
+.derecha-frame-d .overlap-group-2 {
+  position: relative;
+  width: 165px;
+  height: 165px;
+  border-radius: 10px;
+}
+
+.derecha-frame-d .rectangle-2 {
+  height: 164px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 164px;
+  background-color: #ffffff33;
+  border-radius: 10px;
+  transform: rotate(90.00deg);
+}
+
+.derecha-frame-d .frame-wrapper {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.derecha-frame-d .frame-2texto {
+  display: flex;
+  flex-direction: column;
+  width: 84px;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.derecha-frame-d .text-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--blanco);
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.derecha-frame-d .captura-de-pantalla {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--blanco);
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.derecha-frame-d .div-wrapper {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.derecha-frame-d .frame-3 {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.derecha-frame-d .frame-4 {
+  display: flex;
+  width: 156px;
+  height: 156px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.derecha-frame-d .frame-5 {
+  position: absolute;
+  width: 156px;
+  height: 156px;
+  top: 5px;
+  left: 5px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: #ffffff66;
+}
+
+.arrastrable{
+  cursor: grab; /* El cursor cambia cuando se puede arrastrar */
+  position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.arrastrable:active{
+  cursor: grabbing; /* Cuando se está arrastrando */
+}
+
+.frame-practicas {
+  position: relative;
+  z-index: 0;
+}
+
+.clickeable {
+  cursor: grab;
+  z-index: 10; /* Asegúrate de que la clase clickeable tenga un valor mayor */
+  outline: 2px dashed red; /* Asegúrate de que el área clickeable esté visible */
+}
+
+
+/* Modo Día */
+body.modo-dia {
+  .LANDING-d {
+    position: relative;
+    height: auto;
+    width: auto;
+    background-image: url(../assets/fondoL.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}

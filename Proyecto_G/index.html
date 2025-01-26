@@ -2,9 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
+
+    <!--Scripts-->>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="js/shp.js"></script>
+    <script src="js/leaflet.shpfile.js"></script>
+
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/proj4"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/globals.css" />
+    <link rel="stylesheet" href="css/styleguide.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
   </head>
   <body>
     <div class="LANDING-d">
@@ -13,15 +27,23 @@
           <div class="overlap">
             <div class="div">
               <div class="group">
-                <div id="rectangle-2" class="visualizador" style="background-color: blue;"></div>
-                <div id="rectangle-3" class="visualizador" style="background-color: green;"></div>
-                <div id="rectangle-4" class="visualizador" style="background-color: yellow;"></div>
-                <div id="rectangle-5" class="visualizador" style="background-color: purple;"></div>
-                <div id="rectangle-6" class="visualizador" style="background-color: orange;"></div>
-                <div id="rectangle-8" class="visualizador" style="background-color: cyan;"></div>
-                <div id="rectangle-9" class="visualizador" style="background-color: brown;"></div>
-                <div id="rectangle-1" class="visualizador" style="background-color: red;"></div>
-                <div id="rectangle-7" class="visualizador" style="background-color: pink;"></div>
+                <div id="rectangle-1" class="visualizador">
+                  <img src="assets/practicas/3.TempLluv/3.precipitacion.png" alt="precipitacion">
+                </div> <!--  Practica 3.1 -->
+                <div id="rectangle-2" class="visualizador">
+                  <img src="assets/practicas/3.TempLluv/3.temperatura.png" alt="temperatura">
+                </div> <!--  Practica 3.2 -->
+                <div id="rectangle-3" class="visualizador"></div> <!--  Practica 4 -->
+                <div id="rectangle-4" class="visualizador" style="background-color: green;"></div> <!--  Practica 7 -->
+                <div id="rectangle-5" class="visualizador">
+                  <img src="assets/practicas/8.Practica/Contenedores.png" alt="contenedores">
+                </div><!--  Practica 8.1 -->
+                <div id="rectangle-6" class="visualizador"></div>
+                  <img src="assets/practicas/8.Practica/Accidentes_Madrid.png" alt="accidentes"> <!--  Practica 8.2 -->
+                <div id="rectangle-7" class="visualizador"></div> <!--  Practica 9.1 -->
+                <div id="rectangle-8" class="visualizador"></div> <!--  Practica 9.2 -->
+                <div id="rectangle-9" class="visualizador"  style="background-color: red;"></div> <!--  Practica 10 -->
+
                 <div class="rectangle"></div>
                 <div class="rectangle-2"></div>
                 <div class="rectangle-3"></div>
@@ -36,28 +58,28 @@
               <div class="rectangle-11"></div>
               <div class="menu1">
                 <div class="div-2">
-                  <div class="Github-d" id="github"><img class="image Github" src="assets/icono/Github-d.svg" /></div>
+                  <div class="Github-d" id="github"><img class="image Github" src="../assets/icono/Github-d.svg" /></div>
                 </div>
                 <div class="div-2">
-                  <div class="Figma-d" id="figma"><img class="image Figma" src="assets/icono/Figma-d.svg" /></div>
+                  <div class="Figma-d" id="figma"><img class="image Figma" src="../assets/icono/Figma-d.svg" /></div>
                 </div>
                 <div class="div-2 Pablo" id="pablo">
-                  <div class="Pablo-d"><img class="image Pablo" src="assets/icono/Pablo-d.svg" /></div>
+                  <div class="Pablo-d"><img class="image Pablo" src="../assets/icono/Pablo-d.svg" /></div>
                 </div>
                 <div class="div-2 RESM-c" id="resm">
-                  <div class="RESM-d"><img class="image RESM" src="assets/icono/RESM-d.svg" /></div>
+                  <div class="RESM-d"><img class="image RESM" src="../assets/icono/RESM-d.svg" /></div>
                 </div>
               </div>
             </div>
             <div class="menu2">
               <div class="div-2">
-                <div class="home" id="homeButton"><img class="image home" id="homeImage" src="assets/icono/home-c.svg" /></div>
+                <div class="home" id="homeButton"><img class="image home" id="homeImage" src="../assets/icono/home-c.svg" /></div>
               </div>
               <div class="div-2">
-                <div class="dlmode-d" id="modoDiaBtn"><img class="image dlmode" src="assets/icono/dlmode-d.svg" /></div>
+                <div class="dlmode-d" id="modoDiaBtn"><img class="image dlmode" src="../assets/icono/dlmode-d.svg" /></div>
               </div>
               <div class="div-2">
-                <div class="enes-d"><img class="image enes" src="assets/icono/enes-d.svg" /></div>
+                <div class="enes-d"><img class="image enes" src="../assets/icono/enes-d.svg" /></div>
               </div>
             </div>
           </div>
@@ -69,6 +91,7 @@
                       <div class="frame">
                         <div class="text-wrapper">Prácticas:</div>
                         <p class="div">Haz click o arrastra a la izquierda para visualizar</p>
+                        <button id="abrirMapa" disabled>Abir Mapa</button>
                       </div>
                     </div>
                   </div>
@@ -79,8 +102,8 @@
                           <div class="rectangle-2"></div>
                           <div class="frame-wrapper">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">01</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.3.1</div>
+                              <div class="captura-de-pantalla">precipitaciones <br/> .pdf</div>
                             </div>
                           </div>
                         </div>
@@ -90,19 +113,19 @@
                           <div class="rectangle-2"></div>
                           <div class="div-wrapper">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">03</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.04</div>
+                              <div class="captura-de-pantalla">zonas_validas <br />.zip</div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="overlap-group-wrapper clicleable arrastrable" id="clicleable05" draggable="true" data-id="rectangle-5">
+                      <div class="overlap-group-wrapper clicleable arrastrable" id="clicleable05" draggable="true" data-id="rectangle-5" data-url="assets/practicas/8.Practica/Contenedores_Rebollo.html">
                         <div class="overlap-group-2">
                           <div class="rectangle-2"></div>
                           <div class="frame-wrapper">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">05</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.8.1</div>
+                              <div class="captura-de-pantalla">contenedores<br/>.html</div>
                             </div>
                           </div>
                         </div>
@@ -112,8 +135,8 @@
                           <div class="rectangle-2"></div>
                           <div class="div-wrapper">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">07</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.9.1</div>
+                              <div class="captura-de-pantalla">EVI_post<br/>.tiff</div>
                             </div>
                           </div>
                         </div>
@@ -123,8 +146,8 @@
                           <div class="rectangle-2"></div>
                           <div class="frame-wrapper">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">09</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.10</div>
+                              <div class="captura-de-pantalla">MNDWI9<br/>.tiff</div>
                             </div>
                           </div>
                         </div>
@@ -136,8 +159,8 @@
                           <div class="rectangle-2"></div>
                           <div class="frame-3">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">02</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.3.2</div>
+                              <div class="captura-de-pantalla">temperatura<br/>.pdf</div>
                             </div>
                           </div>
                         </div>
@@ -147,19 +170,19 @@
                           <div class="rectangle-2"></div>
                           <div class="frame-4">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">04</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.07</div>
+                              <div class="captura-de-pantalla">gráfico<br />.jpg</div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="overlap-group-wrapper clicleable arrastrable" id="clicleable06" draggable="true" data-id="rectangle-6">
+                      <div class="overlap-group-wrapper clicleable arrastrable" id="clicleable06" draggable="true" data-id="rectangle-6" data-url="assets/practicas/8.Practica/Accidentes_Madrid.html">
                         <div class="overlap-group-2">
                           <div class="rectangle-2"></div>
                           <div class="frame-3">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">06</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.8.2</div>
+                              <div class="captura-de-pantalla">accidentes<br />.hmtl</div>
                             </div>
                           </div>
                         </div>
@@ -169,8 +192,8 @@
                           <div class="rectangle-2"></div>
                           <div class="frame-4">
                             <div class="frame-2texto">
-                              <div class="text-wrapper-2">08</div>
-                              <div class="captura-de-pantalla">captura <br />de pantalla</div>
+                              <div class="text-wrapper-2">p.9.2</div>
+                              <div class="captura-de-pantalla">SAVI_post<br />.tiff</div>
                             </div>
                           </div>
                         </div>
@@ -193,6 +216,7 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+        <script src="js/mapas.js"></script>
+        <script src="js/script.js"></script>
   </body>
 </html>
