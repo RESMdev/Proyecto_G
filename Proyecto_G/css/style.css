@@ -618,6 +618,18 @@ img {
   border-radius: 10px;
 }
 
+.visualizadorMapas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 992px;
+  height: 992px;
+  display: none;
+  /* Oculta todos los visualizadores inicialmente */
+  z-index: 5;
+  border-radius: 10px;
+}
+
 .derecha-frame-d {
   display: flex;
   width: 347px;

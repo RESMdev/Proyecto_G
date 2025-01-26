@@ -51,11 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
         if (visualizador) {
           visualizador.style.display = 'block';
         }
+
+        mostrarMapa();
+        
+        //Recalcular tamaño mapas
+        if (id === 'rectangle-3' || id === 'rectangle-7' || id === 'rectangle-8') {
+          console.log("|Mapa|");
+          //mostrarMapa();
+        } else {
+          console.log("|Imagen|");
+        }
+
         // Activar el botón solo si el clic fue en un rectangle-5 o rectangle-6
         if (id === 'rectangle-5' || id === 'rectangle-6') {
           console.log('Clic en rectangle-5 o rectangle-6'); // Verificar si entra aquí
           document.getElementById('abrirMapa').disabled = false;
-          console.log('Redirigiendo a la URL:', url);
+          console.log('Botón reedirigido a:', url);
         } else {
           // Deshabilitar el botón si no es rectangle-5 o rectangle-6
           document.getElementById('abrirMapa').disabled = true;
@@ -190,12 +201,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Aquí puedes tener una lógica para asociar cada ID de práctica con su archivo
         // Ejemplo:
         const archivos = {
-            'rectangle-1': '/assets/archivos/pdf01.pdf',
-            'rectangle-3': '/assets/archivos/pdf02.pdf',
-            'rectangle-2': '/assets/archivos/pdf03.pdf',
+            'rectangle-1': 'assets/practicas/3.TempLluv/3.PRECIPITACIONES.pdf',
+            'rectangle-3': 'assets/practicas/4.ZONAS_VALIDAS.zip',
+            'rectangle-2': 'assets/practicas/3.TempLluv/3.TEMPERATURAS.pdf',
             'rectangle-4': '/assets/archivos/pdf04.pdf',
-            'rectangle-5': '/assets/archivos/pdf05.pdf',
-            'rectangle-6': '/assets/archivos/pdf06.pdf',
+            'rectangle-5': 'assets/practicas/8.Practica/Contenedores_Rebollo.html',
+            'rectangle-6': 'assets/practicas/8.Practica/Accidentes_Madrid_Rebollo.html',
             'rectangle-7': '/assets/archivos/pdf07.pdf',
             'rectangle-8': '/assets/archivos/pdf08.pdf',
             'rectangle-9': '/assets/archivos/pdf09.pdf',
