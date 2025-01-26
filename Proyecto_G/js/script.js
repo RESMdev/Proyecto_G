@@ -190,12 +190,12 @@ document.addEventListener('DOMContentLoaded', function() {
         // Aquí puedes tener una lógica para asociar cada ID de práctica con su archivo
         // Ejemplo:
         const archivos = {
-            'rectangle-1': '/assets/archivos/pdf01.pdf',
-            'rectangle-3': '/assets/archivos/pdf02.pdf',
-            'rectangle-2': '/assets/archivos/pdf03.pdf',
+            'rectangle-1': 'assets/practicas/3.TempLluv/3.PRECIPITACIONES.pdf',
+            'rectangle-3': 'assets/practicas/4.ZONAS_VALIDAS.zip',
+            'rectangle-2': 'assets/practicas/3.TempLluv/3.TEMPERATURAS.pdf',
             'rectangle-4': '/assets/archivos/pdf04.pdf',
-            'rectangle-5': '/assets/archivos/pdf05.pdf',
-            'rectangle-6': '/assets/archivos/pdf06.pdf',
+            'rectangle-5': 'assets/practicas/8.Practica/Contenedores_Rebollo.html',
+            'rectangle-6': 'assets/practicas/8.Practica/Accidentes_Madrid_Rebollo.html',
             'rectangle-7': '/assets/archivos/pdf07.pdf',
             'rectangle-8': '/assets/archivos/pdf08.pdf',
             'rectangle-9': '/assets/archivos/pdf09.pdf',
