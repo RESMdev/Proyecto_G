@@ -51,11 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
         if (visualizador) {
           visualizador.style.display = 'block';
         }
+
+        mostrarMapa();
+        
+        //Recalcular tamaño mapas
+        if (id === 'rectangle-3' || id === 'rectangle-7' || id === 'rectangle-8') {
+          console.log("|Mapa|");
+          //mostrarMapa();
+        } else {
+          console.log("|Imagen|");
+        }
+
         // Activar el botón solo si el clic fue en un rectangle-5 o rectangle-6
         if (id === 'rectangle-5' || id === 'rectangle-6') {
           console.log('Clic en rectangle-5 o rectangle-6'); // Verificar si entra aquí
           document.getElementById('abrirMapa').disabled = false;
-          console.log('Redirigiendo a la URL:', url);
+          console.log('Botón reedirigido a:', url);
         } else {
           // Deshabilitar el botón si no es rectangle-5 o rectangle-6
           document.getElementById('abrirMapa').disabled = true;
