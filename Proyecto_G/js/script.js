@@ -241,3 +241,50 @@ modoDiaBtn.addEventListener('click', () => {
         localStorage.setItem('modo', 'dia');  // Guardar preferencia de modo día
     }
 });
+
+// //ENES-idioma-traducir
+// // Mapeo de elementos del DOM
+// const elementsToTranslate = {
+//   practicas: document.querySelector('.text-wrapper'),
+//   visualizar: document.querySelector('.div'),
+//   abrirMapa: document.querySelector('#abrirMapa'),
+// };
+
+// // Estado inicial del idioma (por defecto Español)
+// let currentLanguage = localStorage.getItem('language') || 'es';
+
+// // Función para cambiar el idioma
+// async function changeLanguage() {
+//   try {
+//     // Cambiar el idioma al opuesto
+//     currentLanguage = currentLanguage === 'es' ? 'in' : 'es';
+//     localStorage.setItem('language', currentLanguage);
+
+//     // Cargar el archivo de idioma correspondiente
+//     const response = await fetch(`./idiomas/${currentLanguage}.json`);
+    
+//     // Verificar si la carga fue exitosa
+//     if (!response.ok) {
+//       throw new Error(`No se pudo cargar el archivo de idioma: ${response.statusText}`);
+//     }
+
+//     const translations = await response.json();
+
+//     // Actualizar los textos en el DOM
+//     elementsToTranslate.practicas.textContent = translations.practicas;
+//     elementsToTranslate.visualizar.textContent = translations.visualizar;
+//     elementsToTranslate.abrirMapa.textContent = translations.abrirMapa;
+
+//     // Cambiar el ícono si fuera necesario
+//     elementsToTranslate.toggleLangButton.src =
+//       currentLanguage === 'es'
+//         ? '../assets/icono/enes-d.svg'
+//         : '../assets/icono/enes-c.svg'; // Cambia por la ruta de tu ícono
+//   } catch (error) {
+//     console.error('Error al cargar las traducciones:', error);
+//   }
+// }
+
+// // Event Listener para el botón de cambio de idioma
+// elementsToTranslate.toggleLangButton.addEventListener('click', changeLanguage);
+
