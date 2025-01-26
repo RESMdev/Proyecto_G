@@ -99,6 +99,37 @@ function mostrarMapa() {
             // Forzar recalculo del tamaño
             window.tiff2.invalidateSize();
         }
+        //----------------------------------------------------
+        // Initialize the map in rectangle-8
+        if (!window.tiff3) {
+            // Solo inicializamos el mapa si no existe una instancia activa
+            window.tiff3 = L.map('rectangle-9').setView([0, 0], 2);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(window.tiff3);
+
+            const geotiffUrl3 = 'assets/practicas/10.tif/MNDWI_Landsat8.tif';
+
+            fetch(geotiffUrl3)
+                .then(response => response.arrayBuffer())
+                .then(async arrayBuffer => {
+                    const georaster = await parseGeoraster(arrayBuffer);
+                    const layer = new GeoRasterLayer({
+                        georaster,
+                        opacity: 0.7,
+                        resolution: 256 // Optional
+                    });
+
+                    window.tiff3.addLayer(layer);
+                    window.tiff3.fitBounds(layer.getBounds());
+                }).catch(error => {
+                    console.error('Error loading GeoTIFF:', error);
+                });
+
+            // Forzar recalculo del tamaño
+            window.tiff2.invalidateSize();
+        }
     }, 100);  // Pequeña espera para asegurarse de que la pantalla haya sido actualizada
 }
 
@@ -115,6 +146,10 @@ function resetearMapa() {
     if (window.tiff2) {
         window.tiff2.remove();  // Elimina el mapa tiff2
         window.tiff2 = null;  // Liberamos la referencia
+    }
+    if (window.tiff3) {
+        window.tiff3.remove();  // Elimina el mapa tiff2
+        window.tiff3 = null;  // Liberamos la referencia
     }
 
     // No borramos el contenido de los contenedores completamente
